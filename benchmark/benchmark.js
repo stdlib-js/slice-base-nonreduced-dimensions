@@ -22,7 +22,7 @@
 
 // MODULES //
 
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var isArray = require( '@stdlib/assert-is-array' );
 var S = require( '@stdlib/slice-ctor' );
 var MultiSlice = require( '@stdlib/slice-multi' );
