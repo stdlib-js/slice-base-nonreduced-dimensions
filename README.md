@@ -47,38 +47,30 @@ In a multi-axis indexing expression (e.g., '1,:,2,:,0:10:1'), a non-reduced dime
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/slice-base-nonreduced-dimensions
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-nonreducedDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var nonreducedDimensions = require( 'path/to/vendor/umd/slice-base-nonreduced-dimensions/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.nonreducedDimensions;
-})();
-</script>
+var nonreducedDimensions = require( '@stdlib/slice-base-nonreduced-dimensions' );
 ```
 
 <a name="main"></a>
@@ -120,15 +112,10 @@ var indices = nonreducedDimensions( s );
 
 <!-- eslint-disable new-cap -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var S = require( '@stdlib/slice-ctor' );
+var MultiSlice = require( '@stdlib/slice-multi' );
+var nonreducedDimensions = require( '@stdlib/slice-base-nonreduced-dimensions' );
 
 var s = new MultiSlice( null, S(), -1 );
 var out = nonreducedDimensions( s );
@@ -149,11 +136,6 @@ console.log( '%s => [%s]', s.toString(), out.join( ',' ) );
 s = new MultiSlice( S( 1, 20, 2 ), S( null, null, -1 ) );
 out = nonreducedDimensions( s );
 console.log( '%s => [%s]', s.toString(), out.join( ',' ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -202,7 +184,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -245,7 +227,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-base-nonreduced-dimensions/main/LICENSE
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi/tree/umd
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
 
 </section>
 
