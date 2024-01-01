@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,19 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MAIN //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { MultiSlice } from '@stdlib/types/slice';
 
 /**
 * Returns a list of non-reduced dimensions in an un-normalized multi-slice.
 *
-* @param {MultiSlice} slice - input slice
-* @returns {NonNegativeIntegerArray} list of non-reduced dimensions
+* @param slice - input slice
+* @returns list of indices
 *
 * @example
-* var MultiSlice = require( '@stdlib/slice-multi' );
-* var Slice = require( '@stdlib/slice-ctor' );
+* var MultiSlice = require( `@stdlib/slice/multi` );
+* var Slice = require( `@stdlib/slice/ctor` );
 *
 * var s = new MultiSlice( 1, null, 2, void 0, new Slice( 0, 10, 1 ) );
 * // returns <MultiSlice>
@@ -36,22 +38,9 @@
 * var indices = nonreducedDimensions( s );
 * // returns [ 1, 3, 4 ]
 */
-function nonreducedDimensions( slice ) {
-	var data;
-	var out;
-	var i;
-
-	data = slice.data;
-	out = [];
-	for ( i = 0; i < data.length; i++ ) {
-		if ( typeof data[ i ] !== 'number' ) {
-			out.push( i );
-		}
-	}
-	return out;
-}
+declare function nonreducedDimensions( slice: MultiSlice ): Array<number>;
 
 
 // EXPORTS //
 
-module.exports = nonreducedDimensions;
+export = nonreducedDimensions;
