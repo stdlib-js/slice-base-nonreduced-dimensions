@@ -47,30 +47,14 @@ In a multi-axis indexing expression (e.g., '1,:,2,:,0:10:1'), a non-reduced dime
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/slice-base-nonreduced-dimensions
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var nonreducedDimensions = require( '@stdlib/slice-base-nonreduced-dimensions' );
+import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@esm/index.mjs';
 ```
 
 <a name="main"></a>
@@ -80,8 +64,8 @@ var nonreducedDimensions = require( '@stdlib/slice-base-nonreduced-dimensions' )
 Return a list of non-reduced dimensions in an un-normalized [`MultiSlice`][@stdlib/slice/multi] object.
 
 ```javascript
-var MultiSlice = require( '@stdlib/slice-multi' );
-var Slice = require( '@stdlib/slice-ctor' );
+import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
+import Slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
 
 var s = new MultiSlice( 1, null, 2, void 0, new Slice( 0, 10, 1 ) );
 // returns <MultiSlice>
@@ -112,10 +96,15 @@ var indices = nonreducedDimensions( s );
 
 <!-- eslint-disable new-cap -->
 
-```javascript
-var S = require( '@stdlib/slice-ctor' );
-var MultiSlice = require( '@stdlib/slice-multi' );
-var nonreducedDimensions = require( '@stdlib/slice-base-nonreduced-dimensions' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import S from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
+import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
+import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@esm/index.mjs';
 
 var s = new MultiSlice( null, S(), -1 );
 var out = nonreducedDimensions( s );
@@ -136,6 +125,10 @@ console.log( '%s => [%s]', s.toString(), out.join( ',' ) );
 s = new MultiSlice( S( 1, 20, 2 ), S( null, null, -1 ) );
 out = nonreducedDimensions( s );
 console.log( '%s => [%s]', s.toString(), out.join( ',' ) );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -167,7 +160,7 @@ console.log( '%s => [%s]', s.toString(), out.join( ',' ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -227,7 +220,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-base-nonreduced-dimensions/main/LICENSE
 
-[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
+[@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi/tree/esm
 
 </section>
 
