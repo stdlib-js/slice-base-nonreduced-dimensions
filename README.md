@@ -56,6 +56,11 @@ In a multi-axis indexing expression (e.g., '1,:,2,:,0:10:1'), a non-reduced dime
 To use in Observable,
 
 ```javascript
+nonreducedDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/slice-base-nonreduced-dimensions/tags). For example,
+
+```javascript
 nonreducedDimensions = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@v0.2.0-umd/browser.js' )
 ```
 
@@ -68,7 +73,7 @@ var nonreducedDimensions = require( 'path/to/vendor/umd/slice-base-nonreduced-di
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -126,7 +131,7 @@ var indices = nonreducedDimensions( s );
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
