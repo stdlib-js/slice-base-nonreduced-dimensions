@@ -54,7 +54,7 @@ In a multi-axis indexing expression (e.g., '1,:,2,:,0:10:1'), a non-reduced dime
 ## Usage
 
 ```javascript
-import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@deno/mod.js';
+import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@v0.2.0-deno/mod.js';
 ```
 
 <a name="main"></a>
@@ -99,7 +99,7 @@ var indices = nonreducedDimensions( s );
 ```javascript
 import S from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
 import MultiSlice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
-import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@deno/mod.js';
+import nonreducedDimensions from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-nonreduced-dimensions@v0.2.0-deno/mod.js';
 
 var s = new MultiSlice( null, S(), -1 );
 var out = nonreducedDimensions( s );
