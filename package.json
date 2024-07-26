@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/slice-base-nonreduced-dimensions",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Return a list of non-reduced dimensions in an un-normalized multi-slice.",
   "license": "Apache-2.0",
   "author": {
